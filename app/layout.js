@@ -11,15 +11,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="flex flex-col min-h-screen relative">
+      <body className="flex flex-col min-h-screen">
+        <SessionWrapper>
         <Navbar />
         <div className="absolute inset-0 -z-10 bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]" />
-        <main className="flex-grow flex flex-col items-center justify-center">
-        <SessionWrapper>
+        <main className="flex-grow flex flex-col items-center justify-center text-white">
           {children}
-        </SessionWrapper>
         </main>
         <Footer />
+        </SessionWrapper>
       </body>
     </html>
   )
