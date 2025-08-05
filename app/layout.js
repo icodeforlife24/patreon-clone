@@ -1,6 +1,7 @@
 import './globals.css'
 import Navbar from '../components/Navbar'
 import Footer from '@/components/Footer'
+import SessionWrapper from '@/components/SessionWrapper'
 
 export const metadata = {
   title: 'Next.js',
@@ -14,7 +15,9 @@ export default function RootLayout({ children }) {
         <Navbar />
         <div className="absolute inset-0 -z-10 bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]" />
         <main className="flex-grow flex flex-col items-center justify-center">
+        <SessionWrapper>
           {children}
+        </SessionWrapper>
         </main>
         <Footer />
       </body>
