@@ -1,10 +1,22 @@
 "use client"
 import React from 'react'
-import { signIn,signOut } from 'next-auth/react'
+import { useEffect } from 'react'
+import { signIn,signOut,useSession } from 'next-auth/react'
+import { useRouter } from 'next/navigation'
 import Github from 'next-auth/providers/github'
 
 const Login = () => {
+    const { data: session } = useSession();
+    const router = useRouter();
+      useEffect(() => {
+    if (session?.user?.name) {
+    
+      router.push(`/${session.user.name}`);
+    }
+  }, [session, router]);
     return (
+    
+         <> 
         <div>
             <h1 className='text-amber-50 text-4xl mb-9'>Login to fund your favorite creators and get exclusive content!</h1>
             <div className='flex flex-col justify-center mt-5'>
@@ -55,7 +67,9 @@ const Login = () => {
 
             </div>
         </div>
+        </>
     )
+    
 }
 
 export default Login
