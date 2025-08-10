@@ -27,23 +27,24 @@ export default function Username({ params }) {
       </h1>
     </div>
     <div className="flex h-100 justify-between items-center mt-10 gap-2 m-4">
-      <div className='w-1/2 h-full bg-[#1F0F47] opacity-35'>
-      <ul style={{ listStyleType: 'none', padding: 0 }} className='flex flex-col gap-2 justify-center items-center text-white text-xl' >
-        <li className='flex'>
+      <div className='w-1/2 h-full bg-[#070117] rounded-lg p-4'>
+        <h2 className='text-2xl text-white mb-4 '>Recent Donations</h2>
+      <ul style={{ listStyleType: 'none', padding: 0 }} className=' flex flex-col items-start text-white text-l' >
+        <li className='flex justify-center items-center gap-2'>
           <img src="/assets/default-avatar.jpg" alt="user" className='w-6 h-6 rounded-full'/>
           ninja donated $10
         </li>
-        <li className='flex'>
+        <li className='flex justify-center items-center gap-2'>
           <img src="/assets/default-avatar.jpg" alt="user" className='w-6 h-6 rounded-full'/>
           ninja donated $10 
         </li>
-        <li className='flex'>
+        <li className='flex justify-center items-center gap-2'>
           <img src="/assets/default-avatar.jpg" alt="user" className='w-6 h-6 rounded-full'/>
           ninja donated $10
         </li>
         </ul>
       </div>
-      <div className='w-1/2 h-full bg-[#1F0F47] opacity-35'></div>
+      <div className='w-1/2 h-full bg-[#070117] rounded-lg p-4'></div>
       
     </div>
 </>
