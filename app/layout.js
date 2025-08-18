@@ -1,6 +1,5 @@
 import './globals.css'
 import Navbar from '../components/Navbar'
-import Footer from '@/components/Footer'
 import SessionWrapper from '@/components/SessionWrapper'
 
 export const metadata = {
@@ -11,12 +10,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="flex flex-col min-h-screen">
+      <body>
         <SessionWrapper>
           <Navbar />
-          <div className="h-max absolute inset-0 -z-10 bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]" >
+          <div className=" overflow-y-scroll min-h-screen w-full fixed inset-0 -z-10 bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[length:20px_20px]">
             {children}
-            </div>
+          </div>
+
         </SessionWrapper>
       </body>
     </html>
